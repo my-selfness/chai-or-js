@@ -23,5 +23,6 @@ const NewStr1= "        hitsh        "
 // console.log(NewStr1.trim());
 
 const url= "https://hitesh.com/hitesh%20choudhary"
-liog
+console.log(url.replace('%20','-'))
 
+console.log(gameName.split('-'))
