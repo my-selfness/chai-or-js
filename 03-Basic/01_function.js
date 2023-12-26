@@ -28,4 +28,31 @@ function loginUserMessage(username="Sam"){
 }
 
 
-console.log(loginUserMessage());
+// console.log(loginUserMessage());
+
+
+
+function calculater(val1,val2,...number1) {
+    return number1
+}
+
+// console.log(calculater(200,300,100,400));
+
+const user={
+    username:"hitesh",
+    price:188
+}
+
+
+function handleObj(anyObj) {
+    console.log(`Username is ${anyObj.username} and price is ${anyObj.price}`);
+}
+handleObj(user)
+
+const myNewArr = [100,200,300]
+
+function returnSecond(getArr) {
+    return getArr[1]
+}
+
+console.log(returnSecond(myNewArr));
