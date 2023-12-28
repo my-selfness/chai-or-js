@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: #333;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+
+    <script>
+        function addLan(langName){
+            const liItem = document.createElement('li')
+            liItem.innerHTML= `${langName}`
+            document.querySelector('.language').appendChild(liItem)
+        }
+
+        const language = ["python","java","c","cpp","ruby"]
+
+        addLan("go")
+        // for (let i = 0; i < language.length; i++) {
+        //     addLan(language[i])
+        // }
+
+        function optimized(langName){
+            const li =document.createElement('li')
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector(".language").appendChild(li)
+        }
+        optimized("cpp")
+
+        // Edit 
+
+        const secondLang = document.querySelector("li:nth-child(2)")
+        const newLi=document.createElement('li')
+        newLi.textContent = "Rust"
+        secondLang.replaceWith(newLi)
+
+        // remove
+        const lastLang = document.querySelector("li:last-child")
+        lastLang.remove()
+        // console.log(lastLang);
+
+    </script>
+</body>
+</html>
